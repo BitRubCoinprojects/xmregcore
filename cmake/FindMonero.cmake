@@ -68,7 +68,8 @@ set(LIBS  cryptonote_core
           epee
           checkpoints
           version
-          cncrypto)
+          cncrypto
+          hardforks)
 
 set(Xmr_INCLUDE_DIRS "${CPP_MONERO_DIR}")
 
@@ -91,6 +92,7 @@ foreach (l ${LIBS})
                                       "/contrib/epee/src"
                                       "/external/easylogging++/"
                                       "/src/ringct/"
+                                      "/external/${l}"
 			NO_DEFAULT_PATH
 			)
 
